@@ -1,0 +1,23 @@
+# Executive Summary – SQL Operations & Quality Analysis
+
+## Objective
+Demonstrate business-focused SQL analysis by modelling production, downtime, and quality data in a star schema and producing KPI, Pareto, and cost-impact insights.
+
+## Dataset Note
+This project uses a synthetic (simulated) operations dataset designed to reflect realistic manufacturing scenarios while avoiding the use of confidential company data.
+
+## Key Insights (examples produced by SQL queries)
+- Production attainment varies by day and shift, indicating operational instability.
+- Downtime minutes follow a Pareto pattern: a small number of reasons drive most lost time.
+- Defects and scrap are concentrated by defect type and machine, enabling targeted improvement actions.
+- Estimated cost impact can be calculated from downtime and scrap using transparent assumptions.
+
+## Recommended Actions
+1. Prioritise the top downtime driver (Pareto) and implement prevention actions (material readiness, changeover standardisation, planned maintenance).
+2. Investigate defect hotspots by machine: confirm process settings, tooling condition, calibration and inspection points.
+3. Compare shift performance and standardise best practices across teams.
+
+## Next Enhancements
+- Extend dataset period (e.g., 60–90 days) to strengthen trend analysis.
+- Add product-level cost and margin assumptions for more realistic business impact.
+- Build a Power BI dashboard using `vw_daily_operations_summary`.
